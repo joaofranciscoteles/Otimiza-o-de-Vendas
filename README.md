@@ -108,7 +108,7 @@ spec:
   clusterIP: None  # Torna o service acessível apenas dentro do cluster
 ```
 
-## 4. Instruções de Instalação do Ambiente Kubernetes
+## Comandos utilizados para Execução e Teste
 ```festança
 # Aplica o manifesto do Deployment
 kubectl apply -f redis-deployment.yaml
