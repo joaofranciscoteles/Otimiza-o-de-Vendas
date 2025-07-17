@@ -127,6 +127,14 @@ kubectl run -it --rm --restart=Never redis-cli-test --image=redis:latest -- bash
 redis-cli -h redis-service SET usuario:100 "Joao"
 redis-cli -h redis-service GET usuario:100
 ```
+## 7. Prints das Execuções
+![Print da criação do Deployment](redis_hash.jpeg)
+![Print do Service](redis_AOF.png)
+![Print do funcionamento do Redis](logs.jpeg)
+![Print do funcionamento do DashBoard](logs.jpeg)
+
+
+
 
 
 
