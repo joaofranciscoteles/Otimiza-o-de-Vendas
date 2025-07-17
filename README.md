@@ -106,6 +106,25 @@ spec:
       port: 6379  # Porta que o Service expõe
   clusterIP: None  # Torna o service acessível apenas dentro do cluster
 
+## 4. Instruções de Instalação do Ambiente Kubernetes
+# Aplica o manifesto do Deployment
+kubectl apply -f redis-deployment.yaml
+
+# Aplica o manifesto do Service
+kubectl apply -f redis-service.yaml
+
+# Verifica os Pods no cluster
+kubectl get pods
+
+# Verifica os Serviços no cluster
+kubectl get services
+
+# Teste a comunicação com o Redis dentro do cluster
+kubectl run -it --rm --restart=Never redis-cli-test --image=redis:latest -- bash
+redis-cli -h redis-service SET usuario:100 "Joao"
+redis-cli -h redis-service GET usuario:100
+
+
 
 
 
