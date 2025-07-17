@@ -88,6 +88,7 @@ spec:
         image: redis:latest  # Imagem do Redis
         ports:
         - containerPort: 6379  # Porta do Redis
+```
 
 ## Manifesto para o Service do Redis
 
@@ -105,8 +106,10 @@ spec:
     - protocol: TCP
       port: 6379  # Porta que o Service expõe
   clusterIP: None  # Torna o service acessível apenas dentro do cluster
+```
 
 ## 4. Instruções de Instalação do Ambiente Kubernetes
+```festança
 # Aplica o manifesto do Deployment
 kubectl apply -f redis-deployment.yaml
 
@@ -123,7 +126,7 @@ kubectl get services
 kubectl run -it --rm --restart=Never redis-cli-test --image=redis:latest -- bash
 redis-cli -h redis-service SET usuario:100 "Joao"
 redis-cli -h redis-service GET usuario:100
-
+```
 
 
 
