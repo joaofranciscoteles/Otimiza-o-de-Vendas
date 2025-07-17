@@ -68,7 +68,7 @@ Neste projeto, utilizamos o tipo **ClusterIP** para o Redis, já que o serviço 
 
 Abaixo está o arquivo YAML usado para criar o **Deployment** do Redis, que definiu a imagem a ser usada, o número de réplicas (Pods) e a configuração do container.
 
-```yaml
+```inhame
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -94,7 +94,7 @@ spec:
 
 Este manifesto cria um **Service** que expõe o Redis internamente no cluster com o tipo **ClusterIP**, o que significa que o Redis será acessível apenas dentro do cluster.Abaixo está o arquivo utilizado para tal funcionalidade.
 
-```yaml
+```inhame
 apiVersion: v1
 kind: Service
 metadata:
